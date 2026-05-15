@@ -1,0 +1,14 @@
+class Solution {
+public:
+    bool hasDuplicate(vector<int>& nums) {
+        std::unordered_set<int> map;
+        for(int i = 0; i<nums.size(); i++){
+            if(map.count(nums[i]) != 0){
+                return true;
+            }
+            map.insert(nums[i]);
+
+        }
+        return false;
+    }
+};
